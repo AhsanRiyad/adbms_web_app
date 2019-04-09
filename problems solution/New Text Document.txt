@@ -1,0 +1,14 @@
+sqlplus "/as sysdba"
+
+
+alter session set "_ORACLE_SCRIPT"=true; 
+
+
+
+
+
+
+SQLPlus> connect sys as sysdba
+SQLPlus> alter pluggable database all open; 
+
+grant all privileges to user_name;

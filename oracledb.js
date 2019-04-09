@@ -62,7 +62,8 @@ oracledb.getConnection(
     var email = obj.email;
     var pass = obj.password;
 
-    var sql = "select * from guser where email='"+email+"' and  password='"+pass+"'  "; 
+    // var sql = "select * from guser where email='"+email+"' and  password='"+pass+"'  "; 
+    var sql = "select * from emp"; 
     connection.execute(
       // The statement to execute
       sql,
