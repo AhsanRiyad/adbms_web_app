@@ -74,11 +74,11 @@ module.exports = {
   // Instead of hard coding the password, consider prompting for it,
   // passing it in an environment variable via process.env, or using
   // External Authentication.
-  password      : process.env.NODE_ORACLEDB_PASSWORD || "hello",
+  password      : process.env.NODE_ORACLEDB_PASSWORD || "tiger",
 
   // For information on connection strings see:
   // https://oracle.github.io/node-oracledb/doc/api.html#connectionstrings
-  connectString : process.env.NODE_ORACLEDB_CONNECTIONSTRING || "localhost/orclpdb",
+  connectString : process.env.NODE_ORACLEDB_CONNECTIONSTRING || "localhost:1521/xe",
 
   // Setting externalAuth is optional.  It defaults to false.  See:
   // https://oracle.github.io/node-oracledb/doc/api.html#extauth

@@ -46,9 +46,9 @@ execute: function(obj , callback){
 
 oracledb.getConnection(
   {
-    user          : dbConfig.user,
-    password      : dbConfig.password,
-    connectString : dbConfig.connectString
+    user          : 'riyad',
+    password      : '448787',
+    connectString : 'localhost:1521/xe'
   },
   function(err, connection) {
     if (err) {
@@ -63,10 +63,13 @@ oracledb.getConnection(
     var pass = obj.password;
 
     // var sql = "select * from guser where email='"+email+"' and  password='"+pass+"'  "; 
-    var sql = "select * from emp"; 
+    var sql = "select * from products "; 
     connection.execute(
       // The statement to execute
       sql,
+      { },
+      { outFormat: oracledb.OBJECT },
+
 
       // The "bind value" 180 for the bind variable ":id"
       // [180],
@@ -104,16 +107,6 @@ function doRelease(connection) {
       }
     });
 }
-
-
-
-
-
-
-
-
-
-
 }
 
  }
